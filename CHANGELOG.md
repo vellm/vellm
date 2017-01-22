@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - setup whole cobra project from @HenrikFricke.
 - setup `publish` task to publish markdown files in the cloud from @HenrikFricke.
-- add binaries as attachments to github releases
-- add flow to update homebrew formula
+- add binaries as attachments to github releases @HenrikFricke.
+- add flow to update homebrew formula @HenrikFricke.
 
 [Unreleased]: https://github.com/vellm/vellm-cli/compare/0.1.0...HEAD
