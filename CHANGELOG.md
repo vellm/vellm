@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2017-01-22
+### Added
+- add command to display version from @HenrikFricke.
+
 ## 0.1.0 - 2017-01-22
 ### Added
 - setup whole cobra project from @HenrikFricke.
@@ -13,4 +17,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - add binaries as attachments to github releases @HenrikFricke.
 - add flow to update homebrew formula @HenrikFricke.
 
-[Unreleased]: https://github.com/vellm/vellm-cli/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/vellm/vellm-cli/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/vellm/vellm-cli/compare/0.1.0...0.1.1

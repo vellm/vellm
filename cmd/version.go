@@ -1,4 +1,4 @@
-// Copyright © 2017 Henrik Fricke <hello@vellm.io>
+// Copyright © 2017 NAME HERE <EMAIL ADDRESS>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,15 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package main
+package cmd
 
-import "github.com/vellm/vellm-cli/cmd"
+import (
+	"fmt"
 
-const (
-	// VERSION will be set in deploy process
-	VERSION = "latest"
+	"github.com/spf13/cobra"
 )
 
-func main() {
-	cmd.Execute(VERSION)
+// versionCmd represents the version command
+var versionCmd = &cobra.Command{
+	Use:   "version",
+	Short: "Display vellm-CLI version",
+	Long:  `Display vellm-CLI version`,
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("v" + version)
+	},
+}
+
+func init() {
+	RootCmd.AddCommand(versionCmd)
 }
