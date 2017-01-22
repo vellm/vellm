@@ -16,6 +16,11 @@ package main
 
 import "github.com/vellm/vellm-cli/cmd"
 
+const (
+	// VERSION will be set in deploy process
+	VERSION = "latest"
+)
+
 func main() {
-	cmd.Execute()
+	cmd.Execute(VERSION)
 }
