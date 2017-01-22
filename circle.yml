@@ -1,8 +1,12 @@
 deployment:
   release:
-    tag: /v[0-9]+(\.[0-9]+)*/
+    tag: /[0-9]+(\.[0-9]+)*/
     commands:
+      - git config --global user.name "CircleCI"
+      - git config --global user.email mail@example.com
       - go get github.com/mitchellh/gox
       - go get github.com/tcnksm/ghr
-      - gox -ldflags -output "dist/vellm_{{.OS}}_{{.Arch}}"
+      - gox -ldflags "-X main.VERSION=$CIRCLE_TAG" -output "dist/vellm_{{.OS}}_{{.Arch}}"
+      - zip dist/vellm_darwin_amd64.zip dist/vellm_darwin_amd64
       - ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace $CIRCLE_TAG dist/
+      - ./scripts/update-homebrew-formula.sh
