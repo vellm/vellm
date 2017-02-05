@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/vellm/vellm-cli",
+	"ImportPath": "github.com/vellm/vellm",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v75",
 	"Deps": [
