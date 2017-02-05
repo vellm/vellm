@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/vellm/vellm-cli/cmd"
+import "github.com/vellm/vellm/cmd"
 
 const (
 	// VERSION will be set in deploy process
